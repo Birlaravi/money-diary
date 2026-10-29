@@ -1282,7 +1282,9 @@ window.addEventListener('offline', function(){ if(D.connected) setDS('offline');
 document.addEventListener('visibilitychange', function(){ if(!document.hidden) driveSync(false); });
 
 /* ---------- start ---------- */
-applyTheme(); load(); loadTomb(); runRecurring(); render(); driveSync(false);
+applyTheme(); load(); loadTomb(); runRecurring();
+(function(){ try{ var qp = new URLSearchParams(location.search), to = qp.get('go'), add = qp.get('add'); if(add && TYPE_NAMES[add]){ ui.form = newForm(add); ui.screen = 'add'; } else if(to && VIEWS[to] && to !== 'person' && to !== 'personEdit' && to !== 'add'){ ui.screen = to; } if(add || to) history.replaceState(null, '', location.pathname); }catch(e){} })();
+render(); driveSync(false);
 })();
 
 </script>
