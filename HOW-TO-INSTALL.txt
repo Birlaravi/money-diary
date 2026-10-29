@@ -49,8 +49,9 @@ your GitHub link (Option A), not in the single Money-Diary.html file.
        https://<your-github-username>.github.io
    Click Create and copy the Client ID
    (it ends in .apps.googleusercontent.com).
-5. In Money Diary, open Settings > Google Drive sync, paste the Client ID
-   and tap "Connect Google Drive". Choose your Google account.
+5. In Money Diary, open Settings > Google Drive sync and tap
+   "Connect Google Drive". The Client ID is already built into the app.
+   Choose your Google account.
    Google may warn "Google hasn't verified this app". That's expected
    for an app only you use: tap Continue.
 6. Do the same on your other phone or computer (same Client ID) and

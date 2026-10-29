@@ -824,7 +824,9 @@ function importXlsx(file){
 
 /* ---------- Google Drive sync ---------- */
 var DKEY = 'khata.drive.v1';
+var BUILT_IN_CLIENT_ID = '974808491430-g3lpmn508ej85fetph6mobrk76usdcrg.apps.googleusercontent.com';
 var D = Object.assign({ clientId:'', connected:false, fileId:'', lastSync:0, token:'', exp:0 }, lsGet(DKEY) || {});
+if(!D.clientId && BUILT_IN_CLIENT_ID) D.clientId = BUILT_IN_CLIENT_ID;
 var DS = { status: D.connected ? 'idle' : 'off', busy:false, again:false, timer:null, err:'' };
 function saveD(){ lsSet(DKEY, D); }
 function setDS(s, err){ DS.status = s; DS.err = err || ''; var el = $('#syncpill'); if(el) el.outerHTML = syncPill(); var st = $('#drive-status'); if(st) st.textContent = driveStatusText(); }
