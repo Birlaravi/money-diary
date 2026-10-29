@@ -1,13 +1,13 @@
 {
   "name": "Money Diary",
   "short_name": "Money Diary",
-  "description": "Personal money tracker: lend, borrow, split, expenses, family, income.",
+  "description": "Personal money tracker: people, lending, split bills, expenses, family and income.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#F3F4F1",
-  "theme_color": "#16181D",
+  "background_color": "#EEF2F0",
+  "theme_color": "#0B3D35",
   "icons": [
     {
       "src": "icon-192.png",
