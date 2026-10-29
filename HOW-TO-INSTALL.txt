@@ -1,0 +1,85 @@
+MONEY DIARY - install it as an app on your phone
+================================================
+
+Your entries are stored only on your phone. Nothing is sent to any server.
+GitHub only hosts the app's code, the same way the Play Store does.
+
+OPTION A - Install as an app (recommended, takes 5 minutes)
+-----------------------------------------------------------
+1. On GitHub, create a new repository, for example "money-diary".
+2. Upload all the files from this folder (index.html, sw.js,
+   manifest.webmanifest and the 4 icon .png files) to the repository.
+3. In the repository, open Settings > Pages.
+   Source: "Deploy from a branch", Branch: main, folder: / (root). Save.
+4. After a minute, your app is at:
+   https://<your-github-username>.github.io/money-diary/
+5. Open that link on your phone in Chrome.
+   Menu (3 dots) > "Add to Home screen" > Install.
+   On iPhone: open it in Safari > Share > "Add to Home Screen".
+6. Open Money Diary from the icon. It opens full screen and works with
+   no internet.
+
+Want a real .apk file? Go to https://www.pwabuilder.com, paste the link
+from step 4, choose Android and download the package. You can install
+that .apk on your phone.
+
+OPTION B - No setup
+-------------------
+Copy Money-Diary.html to your phone and open it in Chrome. Entries are
+saved in that browser. Opening the file this way doesn't work in every
+phone browser, so Option A is more reliable.
+
+GOOGLE DRIVE SYNC (optional, one-time setup, about 10 minutes)
+---------------------------------------------------------------
+Your data is saved to a hidden app folder in YOUR Google Drive. Only
+this app can read it. It doesn't show up among your normal Drive files
+and is never shared with anyone. It works in the app installed from
+your GitHub link (Option A), not in the single Money-Diary.html file.
+
+1. Go to https://console.cloud.google.com and sign in with your Google
+   account. Create a new project, for example "Money Diary".
+2. Go to APIs & Services > Library, search "Google Drive API" and click
+   Enable.
+3. Go to APIs & Services > OAuth consent screen (also called "Google
+   Auth Platform"). Choose External. Fill in the app name and your
+   email. Under Audience / Test users, add your own Gmail address.
+4. Go to APIs & Services > Credentials > Create credentials >
+   OAuth client ID. Application type: Web application.
+   Under "Authorized JavaScript origins" add:
+       https://<your-github-username>.github.io
+   Click Create and copy the Client ID
+   (it ends in .apps.googleusercontent.com).
+5. In Money Diary, open Settings > Google Drive sync, paste the Client ID
+   and tap "Connect Google Drive". Choose your Google account.
+   Google may warn "Google hasn't verified this app". That's expected
+   for an app only you use: tap Continue.
+6. Do the same on your other phone or computer (same Client ID) and
+   both stay in sync.
+
+How syncing works:
+- Every entry is saved on the phone first, so the app works offline.
+- It syncs to Drive when the app opens, when you come back online,
+  a few seconds after each change, and every 5 minutes.
+- If you edit on two devices, both sets of changes are kept. If the
+  same entry was edited on both, the newer edit wins. Deleted entries
+  are deleted everywhere.
+- Google sign-in lasts about an hour. After a longer break the top pill
+  shows "Tap to sync". Tap it once and sign-in continues.
+- Your PIN is not synced. Set it separately on each device.
+
+KEEP YOUR DATA SAFE
+-------------------
+- Settings > Export to Excel saves everything to one .xlsx file.
+  Do this every week or two. The app reminds you after 14 days.
+- Settings > Import from Excel brings everything back on a new phone,
+  or after you clear the browser's data.
+- You can add rows in Excel too. Leave the ID blank for new rows.
+  Type must be one of: I gave, I got, Split bill, My expense, Family,
+  Income. Date as YYYY-MM-DD or DD/MM/YYYY.
+- If you forget your PIN, "Forgot PIN?" erases the data on this phone
+  only. If Drive sync is on, nothing is lost: after you sign in to
+  Google, everything comes back from your Drive. Without Drive sync,
+  import your latest Excel backup.
+- Clearing the browser's data or changing phones: with Drive sync on,
+  connect Drive again and all your entries come back. Without it, use
+  your Excel backup.
