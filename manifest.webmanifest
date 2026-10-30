@@ -25,5 +25,96 @@
       "type": "image/png",
       "purpose": "maskable"
     }
+  ],
+  "id": "/",
+  "lang": "en-IN",
+  "dir": "ltr",
+  "categories": [
+    "finance",
+    "productivity",
+    "lifestyle"
+  ],
+  "display_override": [
+    "standalone",
+    "minimal-ui"
+  ],
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  },
+  "shortcuts": [
+    {
+      "name": "I gave money",
+      "short_name": "I gave",
+      "url": "./?add=gave",
+      "icons": [
+        {
+          "src": "icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Add expense",
+      "short_name": "Expense",
+      "url": "./?add=expense",
+      "icons": [
+        {
+          "src": "icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "People",
+      "short_name": "People",
+      "url": "./?go=people",
+      "icons": [
+        {
+          "src": "icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Monthly report",
+      "short_name": "Report",
+      "url": "./?go=report",
+      "icons": [
+        {
+          "src": "icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshot-home.png",
+      "sizes": "1082x1922",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Dashboard with balances and quick actions"
+    },
+    {
+      "src": "screenshot-people.png",
+      "sizes": "1082x1922",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "People with who owes whom"
+    },
+    {
+      "src": "screenshot-report.png",
+      "sizes": "1082x1922",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Monthly report"
+    },
+    {
+      "src": "screenshot-wide.png",
+      "sizes": "1280x800",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Dashboard on a computer"
+    }
   ]
 }
